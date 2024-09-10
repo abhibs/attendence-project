@@ -4,13 +4,13 @@
                     <div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
                     </div>
 
-                    <div class="position-relative search-bar d-lg-block d-none" data-bs-toggle="modal"
+                    {{-- <div class="position-relative search-bar d-lg-block d-none" data-bs-toggle="modal"
                         data-bs-target="#SearchModal">
                         <input class="form-control px-5" disabled type="search" placeholder="Search">
                         <span
                             class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-5"><i
                                 class='bx bx-search'></i></span>
-                    </div>
+                    </div> --}}
 
 
                     <div class="top-menu ms-auto">
@@ -21,13 +21,14 @@
                                 </a>
                             </li>
                             <li class="nav-item dropdown dropdown-laungauge d-none d-sm-flex">
-                                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="avascript:;"
+                                {{-- <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="avascript:;"
                                     data-bs-toggle="dropdown"><img
                                         src="{{ asset('admin/assets/images/county/02.png') }}" width="22"
                                         alt="">
-                                </a>
+                                </a> --}}
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
                                                 src="{{ asset('admin/assets/images/county/01.png') }}" width="20"
                                                 alt=""><span class="ms-2">English</span></a>
                                     </li>
@@ -61,14 +62,14 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dark-mode d-none d-sm-flex">
+                            {{-- <li class="nav-item dark-mode d-none d-sm-flex">
                                 <a class="nav-link dark-mode-icon" href="javascript:;"><i class='bx bx-moon'></i>
                                 </a>
-                            </li>
+                            </li> --}}
 
                             <li class="nav-item dropdown dropdown-app">
-                                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown"
-                                    href="javascript:;"><i class='bx bx-grid-alt'></i></a>
+                                {{-- <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown"
+                                    href="javascript:;"><i class='bx bx-grid-alt'></i></a> --}}
                                 <div class="dropdown-menu dropdown-menu-end p-0">
                                     <div class="app-container p-2 my-2">
                                         <div class="row gx-0 gy-2 row-cols-3 justify-content-center p-2">
@@ -314,10 +315,10 @@
                             </li>
 
                             <li class="nav-item dropdown dropdown-large">
-                                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                                {{-- <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
                                     href="#" data-bs-toggle="dropdown"><span class="alert-count">7</span>
                                     <i class='bx bx-bell'></i>
-                                </a>
+                                </a> --}}
                                 <div class="dropdown-menu dropdown-menu-end">
                                     <a href="javascript:;">
                                         <div class="msg-header">
@@ -455,11 +456,11 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown dropdown-large">
-                                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                                {{-- <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
                                     href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="alert-count">8</span>
                                     <i class='bx bx-shopping-bag'></i>
-                                </a>
+                                </a> --}}
                                 <div class="dropdown-menu dropdown-menu-end">
                                     <a href="javascript:;">
                                         <div class="msg-header">
@@ -659,8 +660,8 @@
                             <img src="{{ asset('admin/assets/images/avatars/avatar-2.png') }}" class="user-img"
                                 alt="user avatar">
                             <div class="user-info">
-                                <p class="user-name mb-0">Pauline Seitz</p>
-                                <p class="designattion mb-0">Web Designer</p>
+                                <p class="user-name mb-0">Admin</p>
+                                <p class="designattion mb-0">admin@gmail.com</p>
                             </div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
@@ -668,16 +669,7 @@
                                         class="bx bx-user fs-5"></i><span>Profile</span></a>
                             </li>
                             <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                        class="bx bx-cog fs-5"></i><span>Settings</span></a>
-                            </li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                        class="bx bx-home-circle fs-5"></i><span>Dashboard</span></a>
-                            </li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                        class="bx bx-dollar-circle fs-5"></i><span>Earnings</span></a>
-                            </li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                        class="bx bx-download fs-5"></i><span>Downloads</span></a>
+                                        class="bx bx-cog fs-5"></i><span>Change Password</span></a>
                             </li>
                             <li>
                                 <div class="dropdown-divider mb-0"></div>

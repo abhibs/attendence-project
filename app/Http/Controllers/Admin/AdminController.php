@@ -49,4 +49,10 @@ class AdminController extends Controller
         );
         return redirect()->route('admin-login')->with($notification);
     }
+
+    public function adminProfile()
+    {
+        $admin = Auth::user();
+        return view('admin.profile', compact('admin'));
+    }
 }

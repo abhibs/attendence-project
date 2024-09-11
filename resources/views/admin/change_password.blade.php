@@ -22,7 +22,7 @@
                 <hr />
                 <div class="card">
                     <div class="card-body">
-                        <form method="post" action="">
+                        <form method="post" action="{{ route('admin-password-update') }}">
                             @csrf
                             @if (session('status'))
                                 <div class="alert alert-success" role="alert">

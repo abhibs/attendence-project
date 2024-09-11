@@ -30,12 +30,13 @@
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class="bx bx-user"></i>
                         </div>
-                        <div class="menu-title">Users</div>
+                        <div class="menu-title">Employees</div>
                     </a>
                     <ul>
-                        <li> <a href="app-emailbox.html"><i class='bx bx-radio-circle'></i>All Users</a>
+                        <li> <a href="app-emailbox.html"><i class='bx bx-radio-circle'></i>All Employees</a>
                         </li>
-                        <li> <a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>Add Users</a>
+                        <li> <a href="{{ route('admin-user-create') }}"><i class='bx bx-radio-circle'></i>Add
+                                Employee</a>
                         </li>
 
                     </ul>

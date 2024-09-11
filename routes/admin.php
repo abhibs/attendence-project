@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\UserController;
 
 Route::get('/test', function () {
     echo "Abhiram";
@@ -22,5 +23,11 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::post('/update/pasword', 'updatePassword')->name('admin-password-update');
             });
 
+    });
+
+    Route::controller(UserController::class)->group(function () {
+            Route::group(['middleware' => 'auth:admin'], function () {
+                Route::get('/employee/create', 'create')->name('admin-user-create');
+            });
     });
 });

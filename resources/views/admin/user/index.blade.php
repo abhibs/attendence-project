@@ -1,25 +1,23 @@
 @extends('admin.layout.app')
 @section('content')
-    <div class="content">
+    <div class="page-content">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">Admin</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item"><a href="{{ route('admin-dashboard') }}"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">All Employee</li>
+                    </ol>
+                </nav>
+            </div>
 
+        </div>
         <!-- Start Content-->
         <div class="container-fluid">
 
-            <!-- start page title -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="page-title-box">
-                        <div class="page-title-right">
-                            <ol class="breadcrumb m-0">
-                                <a href="{{ route('admin-user-create') }}" class="btn btn-blue waves-effect waves-light">Add
-                                    User</a>
-                            </ol>
-                        </div>
-                        <h4 class="page-title">User All </h4>
-                    </div>
-                </div>
-            </div>
-            <!-- end page title -->
+
 
             <div class="row">
                 <div class="col-12">
@@ -27,7 +25,7 @@
                         <div class="card-body">
 
 
-                            <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                            <table id="example" class="table dt-responsive nowrap w-100">
                                 <thead>
                                     <tr>
                                         <th>Sl</th>
@@ -53,7 +51,7 @@
                                             <td>
                                                 @foreach ($item->multiImage as $items)
                                                     <img src="{{ asset($items->multi_img) }}"
-                                                        style="width: 60px; height: 50px;padding-bottom: 5px;padding-left: 5px;">
+                                                        style="width: 30px; height: 30px;padding-bottom: 5px;padding-left: 5px;">
                                                 @endforeach
                                             </td>
                                             <td>

@@ -57,7 +57,7 @@
                                             <td>
                                                 <a href=""
                                                     class="btn btn-primary rounded-pill waves-effect waves-light">Edit</a>
-                                                <a href=""
+                                                <a href="{{ route('admin-user-delete', $item->id) }}"
                                                     class="btn btn-danger rounded-pill waves-effect waves-light"
                                                     id="delete">Delete</a>
 

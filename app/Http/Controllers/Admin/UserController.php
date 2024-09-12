@@ -75,4 +75,26 @@ public function store(Request $request)
         // dd($datas);
         return view('admin.user.index', compact('datas'));
     }
+
+    public function delete($id)
+    {
+        $data = User::findOrFail($id);
+        $img = $data->image;
+        unlink($img);
+
+
+        // $datas = MultiImage::findOrFail($id);
+        // $imgs = $datas->multi_image;
+        // unlink($imgs);
+
+        User::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Employee Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+    }
 }

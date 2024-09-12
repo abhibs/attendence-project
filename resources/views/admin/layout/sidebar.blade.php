@@ -33,7 +33,8 @@
                         <div class="menu-title">Employees</div>
                     </a>
                     <ul>
-                        <li> <a href="app-emailbox.html"><i class='bx bx-radio-circle'></i>All Employees</a>
+                        <li> <a href="{{ route('admin-user-index') }}"><i class='bx bx-radio-circle'></i>All
+                                Employees</a>
                         </li>
                         <li> <a href="{{ route('admin-user-create') }}"><i class='bx bx-radio-circle'></i>Add
                                 Employee</a>

@@ -34,7 +34,7 @@ public function store(Request $request)
     $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension(); // 3434343443.jpg
 
     Image::make($image)->resize(400, 400)->save('storage/employee/' . $name_gen);
-    $save_url = 'storage/user/' . $name_gen;
+    $save_url = 'storage/employee/' . $name_gen;
 
     // Store user data
     $user = new User();
@@ -66,6 +66,13 @@ public function store(Request $request)
         'alert-type' => 'success'
     );
 
-    return redirect()->back()->with($notification);
+    return redirect()->route('admin-user-index')->with($notification);
 }
+
+
+    public function index(){
+        $datas = User::with('multiImage')->latest()->get();
+        // dd($datas);
+        return view('admin.user.index', compact('datas'));
+    }
 }

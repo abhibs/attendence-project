@@ -28,6 +28,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::controller(UserController::class)->group(function () {
             Route::group(['middleware' => 'auth:admin'], function () {
                 Route::get('/employee/create', 'create')->name('admin-user-create');
+                Route::post('/employee/store', 'store')->name('admin-user-store');
             });
     });
 });

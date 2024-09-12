@@ -23,7 +23,8 @@
                 <hr />
                 <div class="card">
                     <div class="card-body">
-                        <form method="post" action="">
+                        <form method="post" enctype="multipart/form-data" action="{{ route('admin-user-store') }}">
+                            @csrf
                             <div class="row">
 
 
@@ -55,20 +56,19 @@
                                 </div>
 
 
-                                <div class="form-group col-md-6 mb-3">
+                                <div class="form-group col-md-12 mb-3">
                                     <label for="example-fileinput" class="form-label">Employee Photo</label>
                                     <input type="file" name="image" id="image" class="form-control">
                                 </div>
 
-                                <div class="form-group col-md-6 mb-3">
+                                {{-- <div class="form-group col-md-6 mb-3">
                                     <label for="example-fileinput" class="form-label"> </label>
                                     <img id="showImage" src="{{ url('user-avatar.png') }} "
                                         class="rounded-circle avatar-lg img-thumbnail" alt="profile-image">
-                                </div>
+                                </div> --}}
 
 
                                 <div class="form-group col-md-12 mb-3">
-
                                     <label for="example-fileinput" class="form-label"> Employee Multiple Photo</label>
                                     <input type="file" name="multi_img[]" class="form-control" multiple id="multiImg"
                                         accept="image/jpeg, image/jpg, image/gif, image/png">

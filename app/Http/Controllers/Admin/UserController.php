@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\MultiImage;
+use Intervention\Image\Facades\Image;
 
 class UserController extends Controller
 {
@@ -65,6 +66,6 @@ public function store(Request $request)
         'alert-type' => 'success'
     );
 
-    return redirect()->route('user-index')->with($notification);
+    return redirect()->back()->with($notification);
 }
 }

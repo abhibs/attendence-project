@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -39,7 +40,8 @@ class AdminController extends Controller
 
     public function dashboard()
     {
-        return view('admin.index');
+        $employeeCount = User::count();
+        return view('admin.index', compact('employeeCount'));
     }
 
     public function adminLogout()
